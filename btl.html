@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồng hồ hẹn giờ TimePlus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Đồng hồ hẹn giờ TimePlus</h1>
+        
+        <!-- Đồng hồ đơn -->
+        <div class="timer-controls">
+            <h2>Hẹn giờ đơn</h2>
+            <input type="number" id="singleTimerInput" placeholder="Nhập số giây">
+            <button onclick="startSingleTimer()">Bắt đầu</button>
+        </div>
+        
+        <!-- Đồng hồ đa -->
+        <div class="timer-controls">
+            <h2>Hẹn giờ đa</h2>
+            <div id="multipleTimers">
+                <!-- Các hẹn giờ đa sẽ được thêm vào đây -->
+            </div>
+            <input type="number" id="multipleTimerInput" placeholder="Nhập số giây">
+            <button onclick="addMultipleTimer()">Thêm hẹn giờ</button>
+        </div>
+
+        <!-- Tùy chọn âm thanh -->
+        <div class="sound-options">
+            <h2>Tùy chọn âm thanh</h2>
+            <select id="alarmSoundSelect">
+                <option value="alarm1.mp3">Âm thanh 1</option>
+                <option value="alarm2.mp3">Âm thanh 2</option>
+                <!-- Thêm các tùy chọn âm thanh khác nếu cần -->
+            </select>
+        </div>
+    </div>
+
+    <!-- Audio element for alarm sound -->
+    <audio id="alarmSound" src=""></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
